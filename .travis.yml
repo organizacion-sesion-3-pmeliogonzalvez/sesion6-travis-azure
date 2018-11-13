@@ -1,0 +1,15 @@
+language: php
+php:
+  - 7.2
+services:
+  - mysql
+before_script:
+  - composer install
+script: ./vendor/bin/phpunit ./tests
+deploy:
+  provider: heroku
+  app: curso-github-cefire
+  on: master
+  skip_cleanup: true
+  api_key:
+    secure: poYHhVK74kPPWPQJ9LTxsOTlG0SB0wC+zquGm6+JjZoIOPt7qNA0WPRBpj3LcgAcmuzDwXBN6jVp6HQMBNWBvBtGC7Q7JKATmp7+VVhrV7wbO3mS7qjdcS4dNfG5x6Qf4O9IXa7sOfrkJM37hg8R0OVZGsTCZebtxTacsv1VNwnyxf+z1GHVceaakv7IMEl1daFRnofMYXo6aioMjb8X7GD0GomouXrYdc/KOUyTg+zda7NmttnBlORq6Xx2I73FxGyMGn88oAoNLmNGBdF8o/fTtqr9WKjUP2yNrE5NA3oHBl1TkM8sQxcF4vEVETwouYB1Rb8ydWhzxfR6RdJHksnCaUKiiGOKFIwANVZBAFK+qUDMyqB0DaK2pJ7gt7si9zxS95BrUbiJYZ3Zz3OeJA99O9YObUdI9/UK5jMMSrIQsoCjDrd57+2GET89jQnuuRv4ynnCPI1RSxTD/6h+LoWRBlq6j+3JVFZuKqTcWwHDbpbsq0mmPlBmSQa60ADMbnPMRE3rXRwYGKvyAo8UOcnbHWPjfBcMhi2jWO4XzxgNpwf1azJMQDFpoba/fIm7YJRuRcY/nSnWcFPFSmxZ79T1cRlVO7HNrv5RoJnK8LZbZPtWBQn6tX4ikMKHhEszc3y4wC/xFHyKiVGU42nZtRzPT1ccYJoif4dEdhOXvE4=
