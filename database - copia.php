@@ -8,22 +8,22 @@
 
 // Comprobamos si estamos en Heroku con ClearDB buscando una variable de entorno definida sólo allí
 
-//$os = getenv('CLEARDB_DATABASE_URL');
-$os = getenv('MYSQLCONNSTR_localdb');
+$os = getenv('CLEARDB_DATABASE_URL');
 if ($os) {
 	$url = parse_url($os);
 }
 $settings = array(
     'driver' => 'mysql',
     'host' => $os ? $url["host"] : 'localhost',
-    'port' => $os ? 50654 : 3306,
-    'database' => $os ? 'localdb' : 'biblioteca',
-    'username' => $os ? 'azure' : 'root',
-    'password' => $os ? '6#vWHD_$' : '',
+    'port' => $os ? $url["port"] : 3306,
+    'database' => $os ? substr($url["path"], 1) : 'biblioteca',
+    'username' => $os ? $url["user"] : 'root',
+    'password' => $os ? $url["pass"] : '',
     'charset'   => 'utf8',
     'collation' => 'utf8_spanish_ci',
     'prefix' => ''
 );
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
