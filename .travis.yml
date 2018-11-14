@@ -9,5 +9,6 @@ script: ./vendor/bin/phpunit ./tests
 deploy:
     provider: azure_web_apps
     skip_cleanup: true
+    app: sesion6-travis-azure.azurewebsites.net
  
   
