@@ -6,10 +6,3 @@ services:
 before_script:
   - composer install
 script: ./vendor/bin/phpunit ./tests
-deploy:
-  provider: azure_web_apps
-  app: sesion6-travis-azure.azurewebsites.net
-  on: master
-  skip_cleanup: true
- username: sesion6-travis-azure\$sesion6-travis-azure
- password: kurpkyStkJe1w6nZshdfaDiabAypdroETdqyzell8zwAebgZaw86B3el7k0r
