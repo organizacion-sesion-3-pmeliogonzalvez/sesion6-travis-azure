@@ -10,5 +10,6 @@ deploy:
     provider: azure_web_apps
     skip_cleanup: true
     app: sesion6-travis-azure.azurewebsites.net
+    site: sesion6-travis-azure.azurewebsites.net
  
   
