@@ -1,6 +1,6 @@
 { "collection" :
     {
-        "titttle" : "LIBROOOO Database",
+        "title" : "Books Database",
             "type" : "book",
             "version" : "1.0",
             "href" : "{{ path_for('books')}}",
