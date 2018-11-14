@@ -10,6 +10,6 @@ API CRUD para interactuar con una base de datos de una biblioteca multimedia. Ut
 composer install
 ```
 
-## Acceso al servidor de producción (Heroku)
+## Acceso al servidor de producción (aZURE)
 
-http://APP_NAME.herokuapp.com
+
