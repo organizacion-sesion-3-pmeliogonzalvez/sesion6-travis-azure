@@ -7,8 +7,7 @@ before_script:
   - composer install
 script: ./vendor/bin/phpunit ./tests
 deploy:
-provider: azure_web_apps
- 
-  skip_cleanup: true
+    provider: azure_web_apps
+    skip_cleanup: true
  
   
